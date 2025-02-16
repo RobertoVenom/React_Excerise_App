@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ReactDOM from "component/DurationExercise";
-import ReactDOM from "component/RepetitionExercise";
+import ReactDOM from "DurationExercise/index.js";
+import ReactDOM from "RepetitionExercise/index.js";
 import { useState } from "react";
 import 'app.css'
 
