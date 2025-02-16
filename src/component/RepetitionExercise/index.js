@@ -1,4 +1,4 @@
-import "index.css"
+import 'index.css';
 import React, { useState } from 'react';
 
 function App(){
@@ -8,7 +8,7 @@ function App(){
 
   return (
     <div>
-      <h1>Exercise: {exercise} </h1>
+      <h2>Exercise: {exercise} </h2>
         <p>Count: {count}</p>
         <button onClick={() => setCount(count + 1)}>Add</button>
     </div>
