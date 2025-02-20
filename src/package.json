@@ -1,0 +1,6 @@
+"homepage": "https://RobertoVenom.github.io/React_Excerise_App"
+
+npm i --save-dev gh-pages
+
+"predeploy": "npm run build"
+"deploy": "gh-pages -d build"
