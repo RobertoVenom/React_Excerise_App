@@ -61,6 +61,7 @@ function App(){
       </p>
       <button id="startStop">Start</button>
       <button id="reset">Reset</button>
+      <button id="return">Return</button>
     </div>
   )
 }
