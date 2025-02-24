@@ -11,6 +11,8 @@ function App(){
       <h2>Exercise: {exercise} </h2>
         <p>Count: {count}</p>
         <button onClick={() => setCount(count + 1)}>Add</button>
+        <button onClick={() => reset}>Reset</button>
+        <button id='return'>Return</button>
     </div>
   );
 }
