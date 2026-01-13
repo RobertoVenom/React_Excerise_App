@@ -1,36 +1,42 @@
-import React, { useState } from "react";
-import React, { Bicycling }  from "./component/DurationExercise/index.js";
-import React, { PushUps , JumpingJacks, SitUps } from './component/RepetitionExercise/index.js';
-import React, { Running } from "react";'./component/RunningExercise/index.js';
 import { useState } from "react";
-import 'app.css'
-
-function ButtonList() {
-  const [selectedButton, setSelectedButton] = useState(null); 
-
-  const handleClick= (e) => {
-    const buttonId = e.target.id;
-    setSelectedButton(buttonId);
-  };
-
-  return(
-    <div onClick={handleClick}>
-      <button id="PushUps">Push Ups</button>
-      <button id="Bicycling">Bicycling</button>
-      <button id="JumpingJacks">Jumping Jacks</button>
-      <button id="Running">Running</button>
-      <button id="SitUps">Sit Ups</button>
-    </div>
-  )
-}
+import RepetitionExercise from "./components/RepetitionExercise";
+import DurationExercise from "./components/DurationExercise";
 
 function App() {
+  const [selectedExercise, setSelectedExercise] = useState(null);
+
+  const exercises = [
+    { name: "Push Ups", type: "repetition" },
+    { name: "Sit Ups", type: "repetition" },
+    { name: "Plank", type: "duration" },
+    { name: "Wall Sit", type: "duration" },
+  ];
+
+  if (selectedExercise) {
+    if (selectedExercise.type === "repetition") {
+      return (
+        <RepetitionExercise name={selectedExercise.name} />
+      );
+    } else {
+      return (
+        <DurationExercise name={selectedExercise.name} />
+      );
+    }
+  }
+
   return (
-    <div className="App">
-      <h1>Ready for this</h1>
-      <h2>Choose the Exercise: {excerise}</h2>
-      <ButtonList />
+    <div>
+      <h1>Exercise Tracker</h1>
+      {exercises.map((exercise, index) => (
+        <button
+          key={index}
+          onClick={() => setSelectedExercise(exercise)}
+        >
+          {exercise.name}
+        </button>
+      ))}
     </div>
   );
 }
+
 export default App;
