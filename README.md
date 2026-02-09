@@ -7,5 +7,5 @@
 4. Open http://localhost:3000
 
 ## Technologies Used
--React
--Git & GitHub
+- React
+- Git & GitHub
