@@ -9,6 +9,7 @@ function App() {
     { name: "Push Ups", type: "repetition" },
     { name: "Sit Ups", type: "repetition" },
     { name: "Bicycling", type: "duration" },
+    { name: "JumpingJack", type: "repetition" },
     { name: "Plank", type: "duration" },
     { name: "Wall Sit", type: "duration" },
   ];
@@ -41,6 +42,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
